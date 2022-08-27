@@ -1,4 +1,11 @@
-# Lock/Unlock a PR/Issue
+<div align="center">
+<h1>Lock/Unlock a PR/Issue<br>
+<a href="https://github.com/chxseh/action-lock-unlock/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/chxseh/action-lock-unlock"></a>
+<a href="https://github.com/chxseh/action-lock-unlock/issues"><img alt="Issues" src="https://img.shields.io/github/issues/chxseh/action-lock-unlock"></a>
+<a href="https://github.com/chxseh/action-lock-unlock/pulls"><img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/chxseh/action-lock-unlock"></a>
+<a href="https://github.com/chxseh/action-lock-unlock/network"><img alt="Forks" src="https://img.shields.io/github/forks/chxseh/action-lock-unlock"></a>
+<a href="https://github.com/chxseh/action-lock-unlock/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/github/license/chxseh/action-lock-unlock"></a>
+</h1></div>
 
 Based on [sudo-bot/action-pull-request-lock](https://github.com/sudo-bot/action-pull-request-lock)
 
@@ -22,12 +29,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: chxseh/action-lock-unlock@v1.0.0
+      - uses: chxseh/action-lock-unlock@v1.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ github.event.pull_request.number || github.event.issue.number }}
           lock: true
           lock-reason: resolved
+          # The lock-reason can be: off-topic,too heated,resolved,spam
 ```
 
 ### Unlock a PR/Issue
@@ -44,11 +52,11 @@ on:
       - reopened
 
 jobs:
-  lock:
+  unlock:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: chxseh/action-lock-unlock@v1.0.0
+      - uses: chxseh/action-lock-unlock@v1.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ github.event.pull_request.number || github.event.issue.number }}

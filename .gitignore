@@ -1,3 +1,7 @@
+# Misc
+.DS_Store
+*.bak
+
 /.env
 /node_modules/**/*.md
 !/node_modules/**/LICENSE.*

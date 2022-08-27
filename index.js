@@ -16,15 +16,10 @@ const main = async () =>
     if (lock === 'true')
     {
         await octokit.rest.issues.lock({
-            lock_reason: lock_reason,
             ...context.repo,
             ...context.owner,
             issue_number: number,
-            mediaType: {
-                previews: [
-                    'sailor-v'
-                ]
-            }
+            lock_reason: lock_reason,
         })
     }
     else if (lock === 'false')
