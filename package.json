@@ -1,6 +1,6 @@
 {
     "name": "action-lock-unlock",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Lock/Unlock a PR or issue.",
     "main": "index.js",
     "repository": {
