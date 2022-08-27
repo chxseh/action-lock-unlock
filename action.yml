@@ -1,0 +1,24 @@
+name: "Lock PR/Issue"
+author: chxseh
+description: "Lock/Unlock a PR/Issue when an event triggers the action"
+inputs:
+    github-token:
+        description: "GitHub Token"
+        required: true
+    number:
+        description: "Pull Request/Issue Number"
+        required: true
+    lock:
+        description: "Whether to lock or unlock the PR/Issue"
+        default: "true"
+        required: true
+    lock-reason:
+        description: "The lock reason: off-topic,too heated,resolved,spam"
+        default: "resolved"
+        required: false
+branding:
+    icon: "git-pull-request"
+    color: blue
+runs:
+    using: "node16"
+    main: "index.js"
