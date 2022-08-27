@@ -3,7 +3,8 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-const main = async () => {
+const main = async () =>
+{
     const token = core.getInput('github-token');
     const lock = core.getInput('lock');
     const lock_reason = core.getInput('lock-reason');
@@ -12,7 +13,7 @@ const main = async () => {
     const octokit = github.getOctokit(token);
     const context = github.context;
 
-    if (lock)
+    if (lock === 'true')
     {
         await octokit.rest.issues.lock({
             lock_reason: lock_reason,
@@ -26,7 +27,7 @@ const main = async () => {
             }
         })
     }
-    else if (!lock)
+    else if (lock === 'false')
     {
         await octokit.rest.issues.unlock({
             ...context.repo,
