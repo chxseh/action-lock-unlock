@@ -9,6 +9,10 @@
 
 Based on [sudo-bot/action-pull-request-lock](https://github.com/sudo-bot/action-pull-request-lock)
 
+> **Warning**
+>
+> Bots cannot trigger other workflows, so if you have another workflow that merges/closes a PR/Issue, this workflow would not run.
+
 ## Example Usage
 
 ### Lock a PR/Issue
