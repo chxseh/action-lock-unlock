@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Lock/Unlock a PR/Issue<br>
+<h1><a href="https://github.com/marketplace/actions/lock-pr-issue">Lock/Unlock a PR/Issue</a><br>
 <a href="https://github.com/chxseh/action-lock-unlock/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/chxseh/action-lock-unlock"></a>
 <a href="https://github.com/chxseh/action-lock-unlock/issues"><img alt="Issues" src="https://img.shields.io/github/issues/chxseh/action-lock-unlock"></a>
 <a href="https://github.com/chxseh/action-lock-unlock/pulls"><img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/chxseh/action-lock-unlock"></a>
